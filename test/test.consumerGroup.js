@@ -901,7 +901,7 @@ describe('ConsumerGroup', function () {
     it('should throw an error when message exceeds maximum fetch size', function (done) {
       consumerGroup = new ConsumerGroup(
         {
-          kafkaHost: '127.0.0.1:9092',
+          kafkaHost: 'localhost:9092',
           groupId: uuid.v4(),
           fetchMaxBytes: 1024,
           fromOffset: 'earliest'
