@@ -4,7 +4,7 @@ const KafkaClient = require('../../lib/kafkaClient');
 const HighLevelProducer = require('../../lib/highLevelProducer');
 
 function sendMessage (message, topic, done) {
-  var client = new KafkaClient({ kafkaHost: '127.0.0.1:9092' });
+  var client = new KafkaClient({ kafkaHost: 'localhost:9092' });
   var producer = new HighLevelProducer(client, { requireAcks: 1 });
 
   client.on('connect', function () {
